@@ -1,0 +1,43 @@
+spring:
+  main:
+    allow-circular-references: 'true'
+  datasource:
+    url: #url
+    username: #username
+    password: #password
+    driverClassName: com.mysql.cj.jdbc.Driver
+  flyway:
+    schemas: appointment_manager_db
+    url: #url
+    user: #username
+    password: #password
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+  SMTP.mail:
+    host: #host
+    port: #port
+    username: #username
+    password: #password
+    to: #to email address
+
+  robot:
+    email:
+    from: #from email address
+server:
+  port: 8081
+  servlet:
+    context-path: /appointment_manager/auth
+
+jwt:
+  token:
+    prefix: Bearer
+    validity: '18000'
+  header:
+    string: Authorization
+  signing:
+    key: #signing key
+  authorities:
+    key: roles

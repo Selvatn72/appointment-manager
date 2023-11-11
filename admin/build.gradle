@@ -1,0 +1,20 @@
+plugins {
+    id 'war'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.6.4'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.2'
+    implementation "io.jsonwebtoken:jjwt:0.6.0"
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.mapstruct:mapstruct:1.5.0.Beta1'
+    annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.0.Beta1'
+    implementation 'mysql:mysql-connector-java:8.0.27'
+    implementation "org.springframework.boot:spring-boot-starter-mail"
+    implementation group: 'org.freemarker', name: 'freemarker', version: '2.3.30'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.6'
+    implementation 'org.springframework.boot:spring-boot-starter-mail:1.2.0.RELEASE'
+    implementation 'org.springframework.boot:spring-boot-starter-tomcat:1.2.1.RELEASE'
+}

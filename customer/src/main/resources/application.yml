@@ -1,0 +1,48 @@
+spring:
+  datasource:
+    url: #url
+    username: #username
+    password: #password
+    driverClassName: com.mysql.cj.jdbc.Driver
+  flyway:
+    schemas: appointment_manager_db
+    url: #url
+    user: #username
+    password: #password
+
+  SMTP.mail:
+    host: #host
+    port: #port
+    username: #username
+    password: #password
+    to: #to email address
+
+  robot:
+    email:
+      from: #from email address
+
+server:
+  port: 8083
+  servlet:
+    context-path: /appointment_manager/customer
+
+jwt:
+  token:
+    prefix: Bearer
+    validity: '18000'
+  header:
+    string: Authorization
+  signing:
+    key: #signing key
+  authorities:
+    key: roles
+
+here:
+  api:
+    Key: #here api key
+    url: #here api url
+
+application:
+  calender-api:
+    google: #google api key
+  map-url: #google map url
